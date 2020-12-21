@@ -17,6 +17,7 @@
                                 <th scope="col">Fuel</th>
                                 <th scope="col">mileage</th>
                                 <th scope="col">Color</th>
+                                <th scope="col">Admin</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -28,6 +29,7 @@
                                 <td>{{$car->fuel}}</td>
                                 <td>{{$car->mileage}}</td>
                                 <td>{{$car->color}}</td>
+                                <td><a class="btn-primary" href="{{ route('cars:show', $car->id) }}">Edit</a>
                             </tr>
                             @endforeach
                         </tbody>

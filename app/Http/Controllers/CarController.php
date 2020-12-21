@@ -25,7 +25,7 @@ class CarController extends Controller
      */
     public function create()
     {
-        //
+        return view('cars.create', ['title' => 'Add New Car']);
     }
 
     /**
@@ -47,7 +47,8 @@ class CarController extends Controller
      */
     public function show(Car $car)
     {
-        //
+
+        return view('cars.show', compact('car'));
     }
 
     /**
@@ -70,7 +71,10 @@ class CarController extends Controller
      */
     public function update(Request $request, Car $car)
     {
-        //
+        $car->update($request->all());
+
+        return redirect()->route('cars:index')
+            ->with('success', 'Car updated successfully');
     }
 
     /**
