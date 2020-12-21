@@ -19,7 +19,7 @@ class CreateCarsTable extends Migration
             $table->string('name');
             $table->string('cc');
             $table->string('fuel');
-            $table->number('mileage');
+            $table->integer('mileage');
             $table->string('color');
             $table->timestamps();
         });

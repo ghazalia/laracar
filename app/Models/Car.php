@@ -11,8 +11,8 @@ class Car extends Model
 
     protected $fillable = ['usr_id', 'name', 'cc', 'mileage', 'color'];
 
-    public function owner()
-    {
-        return $this->hasOne(User::class, 'id', 'usr_id');
-    }
+    // public function owner()
+    // {
+    //     return $this->hasOne(User::class, 'id', 'usr_id');
+    // }
 }
