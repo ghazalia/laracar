@@ -21,12 +21,17 @@
                         </thead>
                         <tbody>
                             @foreach($cars as $car)
-                            <td>{{$car->user()->name}}</td>
-                            <td>{{$car->name}}</td>
-                            <td>{{$car->cc}}</td>
-                            <td>{{$car->fuel}}</td>
-                            <td>{{$car->mileage}}</td>
-
+                            <tr>
+                                <td>{{$car->owner->name}}</td>
+                                <td>{{$car->name}}</td>
+                                <td>{{ $car->cc }}</td>
+                                <td>{{$car->fuel}}</td>
+                                <td>{{$car->mileage}}</td>
+                                <td>{{$car->color}}</td>
+                            </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
