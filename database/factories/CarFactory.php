@@ -22,7 +22,12 @@ class CarFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'usr_id' => 1,
+            'name' => $this->faker->lastName,
+            'cc' => 1800,
+            'fuel' => 'patrol',
+            'mileage' => 200000,
+            'color' => $this->faker->colorName,
         ];
     }
 }
