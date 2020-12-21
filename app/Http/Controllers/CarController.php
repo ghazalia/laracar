@@ -36,7 +36,17 @@ class CarController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $car = new Car();
+        $car->usr_id = (int) $request->usr_id;
+        $car->name = $request->name;
+        $car->fuel = $request->fuel;
+        $car->cc = (int)$request->cc;
+        $car->mileage = $request->mileage;
+        $car->color = $request->color;
+        $car->save();
+
+        return redirect()->route('cars:index')
+            ->with('success', 'Car created successfully');
     }
 
     /**
@@ -85,6 +95,9 @@ class CarController extends Controller
      */
     public function destroy(Car $car)
     {
-        //
+        $car->delete();
+
+        return redirect()->route('cars:index')
+            ->with('success', 'Car deleted successfully');
     }
 }

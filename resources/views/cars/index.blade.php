@@ -30,6 +30,7 @@
                                 <td>{{$car->mileage}}</td>
                                 <td>{{$car->color}}</td>
                                 <td><a class="btn-primary" href="{{ route('cars:show', $car->id) }}">Edit</a>
+                                <td><a class="btn-danger" href="{{ route('cars:delete', $car->id) }}">Delete</a>
                             </tr>
                             @endforeach
                         </tbody>

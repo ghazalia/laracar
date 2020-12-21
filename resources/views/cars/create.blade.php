@@ -27,6 +27,10 @@
                             <input type="text" class="form-control" name="mileage" placeholder="Mileage">
                         </div>
                         <div class="form-group">
+                            <label for="fuel">Fuel</label>
+                            <input type="text" class="form-control" name="fuel" placeholder="Type of fuel">
+                        </div>
+                        <div class="form-group">
                             <label for="color">Car Colour</label>
                             <input type="text" class="form-control" name="color" placeholder="Car colour">
                         </div>

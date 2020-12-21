@@ -24,5 +24,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::get('/cars', [CarController::class, 'index'])->name('cars:index');
 Route::get('/cars/add', [CarController::class, 'create'])->name('cars:add');
-Route::get('/cars/{car}', [CarController::class, 'show'])->name('cars:show');
-Route::post('/cars/{car}', [CarController::class, 'update']);
+Route::get('/cars/{car}/edit', [CarController::class, 'show'])->name('cars:show');
+Route::get('/cars/{car}/delete', [CarController::class, 'destroy'])->name('cars:delete');
+Route::post('/cars/{car}/edit', [CarController::class, 'update']);
+Route::post('/cars/add', [CarController::class, 'store']);
