@@ -22,4 +22,4 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/cars', [CarController::class, 'index'])->name('cars');
+Route::get('/cars', [CarController::class, 'index'])->name('cars:index');
